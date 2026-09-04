@@ -28,3 +28,4 @@ public class constructor {
         System.out.println("inside object b: " + obj2.a);
         System.out.println("inside object c: " + obj3.a);
     }
+}
