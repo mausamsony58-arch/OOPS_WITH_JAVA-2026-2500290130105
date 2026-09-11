@@ -10,6 +10,7 @@ class  Book{
         author  = A;
         price = p;
         isbn = is;
+        bookCount++;
     }
     public String getTitle(){
         return Title;
