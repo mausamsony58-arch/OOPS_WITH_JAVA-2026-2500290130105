@@ -13,7 +13,7 @@ public class Trycatch {
             System.out.println(a[i]);
             System.out.println(a[i] / b);
 
-        } catch (Exception e) {
+        } catch (VotingException e) {
             e.printStackTrace();
         }
         finally {
