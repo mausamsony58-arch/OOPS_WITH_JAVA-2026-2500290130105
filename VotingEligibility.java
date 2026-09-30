@@ -6,9 +6,10 @@ class AgeInvalidException extends Exception {
     }
 }
 public class VotingEligibility {
-    static void checkAge(int age) throws AgeInvalidException {
+
+    static void checkAge(int age) throws AgeInvalidException { // throws batata hai ki isme exception aaskti hai
         if (age < 0) {
-            throw new AgeInvalidException("Age cannot be negative");
+            throw new AgeInvalidException("Age cannot be negative"); // ye actual exception throw karta hai
         }
         if (age >= 18) {
             System.out.println("Eligible to vote");

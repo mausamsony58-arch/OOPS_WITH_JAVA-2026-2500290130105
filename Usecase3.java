@@ -1,11 +1,11 @@
   interface Rentable{
-    static double TAX_RATE =0.05;
+    static final  double TAX_RATE =0.05;
     double calculateRent(int days);
 }
 
 class Car implements Rentable{
     static int totalVehiclesRented =0;
-    
+    @Override 
     public double calculateRent(int days){
         Car.totalVehiclesRented++;
         return 1500*days;
@@ -13,6 +13,7 @@ class Car implements Rentable{
     
 }
 class Bike implements Rentable{
+    @Override
     public double calculateRent(int days){
         Car.totalVehiclesRented++;
         return 500*days;

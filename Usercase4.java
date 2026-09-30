@@ -1,7 +1,7 @@
 public class Usercase4 {
     public static void main(String[] args) {
         double balance = 5000.0;
-        double withdrawAmount = 7500.0;
+        double withdrawAmount = 10500.0;
 
         try {
             withdraw(balance, withdrawAmount);
@@ -9,9 +9,12 @@ public class Usercase4 {
         catch (InsufficientBalanceException e) {
             System.out.println(e);
         }
+        finally{
+            System.out.println("Transaction successfully completed.");
+        }
     }
 
-    static void withdraw(double balance, double amount) {
+    static void withdraw(double balance, double amount) throws InsufficientBalanceException {
         if (amount > balance)
             throw new InsufficientBalanceException("Balance insufficient");
         else {
@@ -19,5 +22,9 @@ public class Usercase4 {
             System.out.println("Amount successfully withdraw " + balance);
         }
     }
-    static void  InsufficientBalanceException extends Exception
+    static class InsufficientBalanceException extends Exception {
+        InsufficientBalanceException(String message) {
+            super(message);
+        }
+    }
 }

@@ -12,6 +12,7 @@ class Circle extends Shape{
     Circle(double r){
        this.r = r;    // Construction 
     }
+   @Override 
     double area(){   //Method
         return 22/7.0*r*r;
     }
@@ -25,6 +26,7 @@ class Rectangle extends Shape{
        this.length = length;
        this.width = width;
     }
+    @Override 
     double area(){
         return length*width;
     }
